@@ -99,13 +99,16 @@ body {
 .memes:hover .memes-label {
   color: #000;
 }
-.memes:hover .memes-label,
-.memes:hover .memes-img {
-  cursor: grab;
-}
 
 .memes:hover .memes-label:after {
   display: block;
+}
+
+@media screen and (min-width: 991px) {
+  .memes:hover .memes-label,
+  .memes:hover .memes-img {
+    cursor: grab;
+  }
 }
 
 @media screen and (max-width: 991px) {
