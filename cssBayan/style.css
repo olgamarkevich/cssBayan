@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3em;
+}
+
+.cssBayan {
+  min-height: 100vh;
+  background: #f5eded;
+}
+
+.wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.memes-item {
+  border-top: 1px solid #cecece;
+  position: relative;
+}
+
+.memes-input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.memes-input:hover {
+  cursor: pointer;
+}
+
+.memes-label {
+  padding: 0.5em 0;
+  display: block;
+  color: blue;
+  transition: all 0.3s;
+}
+
+.memes-label:after {
+  content: '';
+  position: absolute;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3e%3c/svg%3e");
+  right: 0;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 1;
+  transition: all 0.4s;
+}
+
+.memes-img {
+  height: 0;
+  overflow: hidden;
+}
+
+.memes-img img {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  transition: 0.4s;
+  transform: scale(0.9);
+}
+
+.memes-input:checked + .memes-label + .memes-img,
+.memes-item:hover .memes-input + .memes-label + .memes-img {
+  height: auto;
+  padding-bottom: 1em;
+}
+.memes-input:checked + .memes-label + .memes-img img,
+.memes-item:hover .memes-input + .memes-label + .memes-img img {
+  transform: scale(1);
+}
+
+.memes-input:checked + .memes-label {
+  color: #000;
+}
+
+.memes-input:checked + .memes-label:after,
+.memes-item:hover .memes-input + .memes-label:after {
+  transform: rotate(-45deg);
+}
+
+.memes:hover .memes-label {
+  color: #000;
+}
+.memes:hover .memes-label,
+.memes:hover .memes-img {
+  cursor: grab;
+}
+
+.memes:hover .memes-label:after {
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    font-size: 1.2em;
+  }
+  .title {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    font-size: 1em;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  .wrapper {
+    max-width: 100%;
+  }
+}
