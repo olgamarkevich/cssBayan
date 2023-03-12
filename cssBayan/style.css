@@ -108,17 +108,13 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 1199px) {
+@media (hover: hover) {
   .memes:hover .memes-label,
   .memes:hover .memes-img {
     cursor: grab;
   }
   .memes-input:hover {
     cursor: pointer;
-  }
-
-  .memes-icon {
-    display: none;
   }
 
   .memes:hover .memes-label {
@@ -136,6 +132,12 @@ body {
 
   .memes-item:hover .memes-input + .memes-label + .memes-img img {
     transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .memes-icon {
+    display: none;
   }
 }
 
