@@ -23,7 +23,7 @@ body {
 }
 
 .memes-item {
-  border-top: 0.02px solid #cecece;
+  border-top: 0.02em solid #cecece;
   position: relative;
 }
 
